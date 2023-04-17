@@ -1,0 +1,16 @@
+.goodsImport {
+  width: 300px;
+}
+.goodsImport input[type="file"] {
+  display: inline-block;
+}
+.importSuccess {
+  color: green;
+  font: normal bold 12px Arial, Helvetica, sans-serif;
+  margin-bottom: 10px;
+}
+.importErrors {
+  color: red;
+  font: normal normal 10px Arial, Helvetica, sans-serif;
+  margin-bottom: 10px;
+}

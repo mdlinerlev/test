@@ -1,0 +1,187 @@
+#skyweb24_contact_type5 label,
+#skyweb24_contact_type5 textarea {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+#skyweb24_contact_type5 ol,
+#skyweb24_contact_type5 ul {
+    list-style: none;
+}
+
+#skyweb24_contact_type5 table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+#skyweb24_contact_type5 {
+    max-width: 540px;
+    background: #fff;
+    overflow: hidden;
+}
+
+#skyweb24_contact_type5 .row_content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 45px;
+    background: linear-gradient(-45deg, var(--theme_color_bg_1) 0%, var(--theme_color_bg_2) 100%);
+    box-sizing: border-box;
+}
+
+#skyweb24_contact_type5 .row_content .title {
+    margin-top: 25px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    width: 100%;
+}
+
+#skyweb24_contact_type5 .row_content .subtitle {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+    width: 100%;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+#skyweb24_contact_type5 .field-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    width: 100%;
+    padding: 0 45px;
+    box-sizing: border-box;
+}
+
+#skyweb24_contact_type5 .field-group {
+    width: 100%;
+}
+
+#skyweb24_contact_type5 .field-group.disabled {
+    display: none;
+    width: 100%;
+}
+
+#skyweb24_contact_type5 .field-group input,
+#skyweb24_contact_type5 .field-group textarea {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 7px;
+    width: 100%;
+    border-style: none;
+    background-color: #e3e3e3;
+}
+
+#skyweb24_contact_type5 .field-group textarea {
+    min-height: 80px;
+    height: 80px;
+}
+
+#skyweb24_contact_type5 .row_img {
+    max-height: 300px;
+    overflow: hidden;
+}
+
+#skyweb24_contact_type5 .row_img img {
+    width: 100%;
+}
+
+
+#skyweb24_contact_type5 .consent {
+    padding: 15px 0px;
+    width: 100%;
+}
+
+#skyweb24_contact_type5 .consent {
+    display: block;
+}
+
+#skyweb24_contact_type5 .consent input {
+    width: auto;
+}
+
+#skyweb24_contact_type5 .consent input,
+#skyweb24_contact_type5 .consent a {
+    display: inline;
+}
+
+#skyweb24_contact_type5 label {
+    width: 100%;
+    display: block;
+}
+
+#skyweb24_contact_type5 .field-group .submit {
+    text-align: center;
+}
+
+#skyweb24_contact_type5 .field-group .submit input {
+    display: inline;
+    width: auto;
+    border-radius: 7px;
+    padding: 10px 25px;
+    color: white;
+}
+
+
+@media screen and (max-width: 768px) {
+    #skyweb24_contact_type5 {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #skyweb24_contact_type5 .row_img{
+      /*  max-height: 150px;*/
+    }
+    #skyweb24_contact_type5 .field-list{
+        padding: 0;
+    }
+}
+@media screen and (max-width: 425px) {
+    #skyweb24_contact_type5 {
+        width: 100%;
+        min-width: 100vw;
+        }
+    }
+
+
+#skyweb24_contact_type5 input[type=submit] {
+    background: var(--theme_color_main);
+}
+
+#skyweb24_contact_type5 input[type=submit]:hover {
+    background: var(--theme_color_add);
+}
+
+.skyweb24_popup_pro_timer {
+    background: var(--theme_color_main);
+}
+
+.sw24PopupPro .popup-window-close-icon {
+    background: var(--theme_color_main);
+}
+
+#skyweb24_contact_type5 .consent a {
+    color: var(--theme_color_text);
+}
+
+#skyweb24_contact_type5 .row_content .title {
+    color: var(--theme_color_main);
+}
+
+#skyweb24_contact_type5 .row_content .subtitle {
+    color: var(--theme_color_text);
+}
+
+#skyweb24_contact_type5 .field-group.notshow{
+    display: none;
+}

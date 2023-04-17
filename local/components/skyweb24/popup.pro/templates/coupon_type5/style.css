@@ -1,0 +1,172 @@
+#skyweb24_coupon_type5 {
+    position: relative;
+    overflow: hidden;
+    width: 90vw;
+    max-width: 800px;
+    height: 100vh;
+    max-height: 450px;
+    box-sizing: border-box;
+    }
+    #skyweb24_coupon_type5 * {
+        box-sizing: border-box;
+        }
+    #skyweb24_coupon_type5 .bg {
+        padding: 40px;
+        height: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-between;
+        background-size: cover;
+        }
+    #skyweb24_coupon_type5 .bg:before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(90deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
+        content: '';
+        }
+    #skyweb24_coupon_type5 input[type="email"],
+    #skyweb24_coupon_type5 input[type="password"],
+    #skyweb24_coupon_type5 input[type="text"] {
+        padding: 0 15px;
+        width: 100%;
+        height: 40px;
+        font-size: 18px;
+        line-height: 40px;
+        border: 1px solid #999999;
+        display: block;
+        outline: none;
+        background: #ffffff;
+        transition: all 0.3s ease;
+        }
+    #skyweb24_coupon_type5 input[type="email"]:active,
+    #skyweb24_coupon_type5 input[type="password"]:active,
+    #skyweb24_coupon_type5 input[type="text"]:active,
+    #skyweb24_coupon_type5 input[type="email"]:focus,
+    #skyweb24_coupon_type5 input[type="password"]:focus,
+    #skyweb24_coupon_type5 input[type="text"]:focus {
+        border-color: var(--theme_color_main);
+        box-shadow: 0 0 0 1px var(--theme_color_main);
+        outline: none;
+        }
+
+    .wndw__cont {
+        position: relative;
+        z-index: 5;
+        padding: 20px 20px 20px 0;
+        max-width: 280px;
+        }
+        .wndw__cont-title {
+            margin-bottom: 15px;
+            font-size: 35px;
+            text-transform: uppercase;
+            color: #ffffff;
+            }
+        .wndw__cont-subtitle {
+            font-size: 18px;
+            color: #ffffff;
+            }
+        .wndw__cont-input {
+            width: 100%;
+            display: block;
+            }
+            .wndw__cont-input > *:not(input) {
+                margin-top: 5px;
+                margin-right: 10px;
+                display: none;
+                color: #ffffff;
+                }
+    .wndw__form {
+        position: relative;
+        z-index: 5;
+        padding: 25px;
+        width: 100%;
+        max-width: 400px;
+        background: rgba(0,0,0,0.6);
+        }
+    .wndw__cont-btn {
+        margin-top: 15px;
+        width: 100%;
+        }
+        .wndw__cont-btn button {
+            padding: 5px 15px;
+            width: 100%;
+            min-height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            color: var(--theme_color_text);
+            transition: all 0.3s ease;
+            background: var(--theme_color_main);
+            }
+        .wndw__cont-btn button:focus,
+        .wndw__cont-btn button:hover {
+            color: #fff;
+            background: var(--theme_color_add);
+            }
+.sw24TextCloseButton {
+    position: absolute;
+    left: 15px;
+    bottom: 10px;
+    border: none;
+    font-size: 14px;
+    text-decoration: none;
+    color: var(--theme_color_text);
+    }
+.sw24TextCloseButton:hover {
+    text-decoration: underline;
+    color: var(--theme_color_text);
+    }
+.skyweb24_popup_pro_timer {
+    background: var(--theme_color_main);
+    }
+.popup-window.sw24PopupPro .popup-window-close-icon {
+    background: var(--theme_color_main);
+    }
+#skyweb24_coupon_type5 .goodCoupon[type="text"] {
+    display: none;
+    font-size: 16px;
+    background: white;
+    padding: 10px 0px;
+    box-sizing: border-box;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    color: var(--sw24-popuppro-text);
+    border: 2px dashed var(--theme_color_main);
+    }
+
+@media screen and (max-width: 768px) {
+    #skyweb24_coupon_type5 .bg {
+        /*width: 700px;*/
+        }
+    .wndw__form {
+        padding: 15px;
+        }
+    }
+@media screen and (max-width: 600px) {
+    #skyweb24_coupon_type5 .bg {
+        /*width: 90vw;*/
+        flex-wrap: wrap;
+        }
+    .wndw__form {
+        padding: 15px;
+        }
+    }
+@media screen and (max-width: 425px) {
+    #skyweb24_coupon_type5 {
+        width: 100%;
+        min-width: 100vw;
+        }
+    .wndw__form {
+        padding: 15px;
+        }
+    }
+

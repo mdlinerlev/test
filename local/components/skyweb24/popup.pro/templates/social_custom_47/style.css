@@ -1,0 +1,209 @@
+@font-face {
+    font-family: 'fontello';
+    src: url('font/fontello.eot?72485272');
+    src: url('font/fontello.eot?72485272#iefix') format('embedded-opentype'),
+    url('font/fontello.woff2?72485272') format('woff2'),
+    url('font/fontello.woff?72485272') format('woff'),
+    url('font/fontello.ttf?72485272') format('truetype'),
+    url('font/fontello.svg?72485272#fontello') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    speak: never;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+    margin-left: .2em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-twitter:before {
+    content: '\f099';
+}
+
+.icon-facebook:before {
+    content: '\f09a';
+}
+
+.icon-youtube-squared:before {
+    content: '\f166';
+}
+
+.icon-youtube:before {
+    content: '\f167';
+}
+
+.icon-youtube-play:before {
+    content: '\f16a';
+}
+
+.icon-vkontakte:before {
+    content: '\f189';
+}
+
+.icon-odnoklassniki:before {
+    content: '\f263';
+}
+
+.icon-odnoklassniki-square:before {
+    content: '\f264';
+}
+
+.icon-twitter-squared:before {
+    content: '\f304';
+}
+
+.icon-facebook-squared:before {
+    content: '\f308';
+}
+
+.icon-vkontakte-squared:before {
+    content: '\f30a';
+}
+
+#skyweb24_banner_type4 {
+    padding: 50px 20px;
+    /*padding: 20px;*/
+    margin: 0 auto;
+    width: 600px;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+    /*background: var(--THEME_COLOR_BG);*/
+    background: var(--theme_color_bg, #fff);
+    --icon-size: 50px;
+    --borrad: var(--icon-size);
+}
+
+.skwb-title {
+    padding-bottom: 30px;
+    display: block;
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--theme_color_text);
+}
+
+.skwb-social {
+    margin: 20px auto;
+    /*max-width: 350px;*/
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.skwb-social__item {
+    margin: 10px 10px 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.skwb-social__item._fb:hover i {
+    box-shadow: 0 0 10px 1px #1877f2;
+}
+
+.skwb-social__item._vk:hover i {
+    box-shadow: 0 0 10px 1px #44678d;
+}
+
+.skwb-social__item._ok:hover i {
+    box-shadow: 0 0 10px 1px #ee8208;
+}
+
+.skwb-social__item._yt:hover i {
+    box-shadow: 0 0 10px 1px #ff0000;
+}
+
+.skwb-social__item._tw:hover i {
+    box-shadow: 0 0 10px 1px #1da1f2;
+}
+
+.skwb-social__item > i {
+    position: relative;
+    height: var(--icon-size);
+    width: var(--icon-size);
+    display: block;
+    border-radius: var(--borrad);
+    font-size: calc(var(--icon-size) / 2);
+    line-height: var(--icon-size);
+    text-align: center;
+    color: #ffffff;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border: 0;
+}
+
+.skwb-social__item:hover > i {
+    color: #ffffff;
+}
+
+.skwb-social__item._fb > i {
+    background: #1877f2;
+}
+
+.skwb-social__item._vk > i {
+    background: #44678d;
+}
+
+.skwb-social__item._ok > i {
+    background: #ee8208;
+}
+
+.skwb-social__item._yt > i {
+    background: #ff0000;
+}
+
+.skwb-social__item._tw > i {
+    background: #1da1f2;
+}
+
+.popup-window-close-icon {
+    background: var(--theme_color_add) !important;
+}
+
+#skyweb24_banner_type4 .sw24TextCloseButton {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    font-size: 14px;
+    border-bottom: 1px dashed var(--theme_color_text);
+    transform: translateX(-50%);
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    color: var(--theme_color_text);
+}
+
+#skyweb24_banner_type4 .sw24TextCloseButton:hover {
+    border-bottom: 1px dashed transparent;
+    color: var(--theme_color_text);
+}
+
+@media screen and (max-width: 425px) {
+    #skyweb24_banner_type4 {
+        width: 100%;
+        min-width: 100vw;
+    }
+
+    .skwb-title {
+        padding-bottom: 30px;
+        display: block;
+        font-size: 30px;
+        font-weight: bold;
+    }
+}

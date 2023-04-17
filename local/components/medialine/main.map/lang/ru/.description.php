@@ -1,0 +1,7 @@
+<?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
+
+$MESS["MEDIALINE_MAIN_MAP_COMPONENT_PATH_ID"] = "medialine";
+$MESS["MEDIALINE_MAIN_MAP_COMPONENT_CHILD_PATH_ID"] = "compsimplechiltpath";
+$MESS["MEDIALINE_MAIN_MAP_COMPONENT_PATH_NAME"] = "Медиа Лайн";
+$MESS["MEDIALINE_MAIN_MAP_COMPONENT"] = "Карта сайта";
+$MESS["MEDIALINE_MAIN_MAP_COMPONENT_DESCRIPTION"] = "Компонент формирования карты сайта";
