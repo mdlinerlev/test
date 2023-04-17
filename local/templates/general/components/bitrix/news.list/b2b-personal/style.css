@@ -1,0 +1,7 @@
+.error{
+    color: red;
+}
+
+.price-select ul{
+    display: block !important;
+}

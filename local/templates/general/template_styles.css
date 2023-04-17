@@ -1,0 +1,414 @@
+/* line 2787, dev/sass/b2b.scss */
+.product-info-availability__list {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-left: 0 !important;
+}
+
+/* line 2791, dev/sass/b2b.scss */
+.product-info-availability__item {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex !important;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    border-bottom: 1px solid #cccccc;
+    font-size: 1.05rem;
+}
+
+.product-info__header {
+    border: none;
+    background-color: #efefef;
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+/* line 2798, dev/sass/b2b.scss */
+.product-info-availability__item:last-child {
+    border-bottom: none;
+}
+
+/* line 2801, dev/sass/b2b.scss */
+.product-info-availability__address {
+    width: 33%;
+    padding-right: 20px;
+}
+
+/* line 2805, dev/sass/b2b.scss */
+.product-info-availability__hours {
+    width: 33%;
+    padding-right: 20px;
+}
+
+/* line 2809, dev/sass/b2b.scss */
+.product-info-availability__link {
+    width: 33%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+   /* -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;*/
+    padding-left: 15%;
+}
+
+@media screen and (max-width: 1440px) {
+    /* line 2818, dev/sass/b2b.scss */
+    .product_view .product_img {
+        max-width: 100%;
+        width: 50%;
+    }
+    /* line 2822, dev/sass/b2b.scss */
+    .product_view .product_params {
+        width: 25%;
+    }
+    /* line 2825, dev/sass/b2b.scss */
+    .product_view .product_order {
+        width: 25%;
+    }
+}
+
+@media screen and (max-width: 1180px) {
+    /* line 2831, dev/sass/b2b.scss */
+    .product_view._big-door > div {
+        width: 100% !important;
+    }
+    /* line 2835, dev/sass/b2b.scss */
+    .product-filter__price-block {
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+    /* line 2839, dev/sass/b2b.scss */
+    .product-filter-submit__prices {
+        margin-bottom: 10px;
+        width: 100%;
+        text-align: center;
+    }
+    /* line 2845, dev/sass/b2b.scss */
+    .product-info-availability__address {
+        width: 33.33%;
+    }
+    /* line 2848, dev/sass/b2b.scss */
+    .product-info-availability__hours {
+        width: 33.33%;
+    }
+    /* line 2851, dev/sass/b2b.scss */
+    .product-info-availability__link {
+        width: 33.33%;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    /* line 2857, dev/sass/b2b.scss */
+    .product_view > div {
+        width: 100% !important;
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* line 2863, dev/sass/b2b.scss */
+    .product_view {
+        position: relative;
+        padding-top: 120px;
+    }
+    /* line 2866, dev/sass/b2b.scss */
+    .product_view .product_img {
+        position: initial;
+        padding-left: 0 !important;
+    }
+    /* line 2870, dev/sass/b2b.scss */
+    .product_view .product-preview__big-images {
+        position: initial;
+    }
+    /* line 2874, dev/sass/b2b.scss */
+    .product_view .product-preview__advantages {
+        top: 30px;
+        left: 50%;
+        -webkit-transform: translateX(-50%) translateY(0);
+        -ms-transform: translateX(-50%) translateY(0);
+        transform: translateX(-50%) translateY(0);
+    }
+    /* line 2878, dev/sass/b2b.scss */
+    .product_view .product-preview__advantages-items {
+        width: auto;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        gap: 20px;
+    }
+    /* line 2888, dev/sass/b2b.scss */
+    .catalog-item__advantages-item {
+        width: 35px;
+        height: 35px;
+    }
+    /* line 2893, dev/sass/b2b.scss */
+    .product-info-availability__item {
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+    /* line 2896, dev/sass/b2b.scss */
+    .product-info-availability__address {
+        width: 50%;
+        -webkit-box-ordinal-group: 2;
+        -webkit-order: 1;
+        -ms-flex-order: 1;
+        order: 1;
+        margin-bottom: 10px;
+    }
+    /* line 2901, dev/sass/b2b.scss */
+    .product-info-availability__hours {
+        width: 50%;
+        -webkit-box-ordinal-group: 4;
+        -webkit-order: 3;
+        -ms-flex-order: 3;
+        order: 3;
+    }
+    /* line 2905, dev/sass/b2b.scss */
+    .product-info-availability__link {
+        width: 50%;
+        -webkit-box-ordinal-group: 3;
+        -webkit-order: 2;
+        -ms-flex-order: 2;
+        order: 2;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .product-info-availability__list {
+        padding-left: 0;
+    }
+    /* line 2912, dev/sass/b2b.scss */
+    .product_view .product-preview__advantages {
+        width: 100%;
+        top: 30px;
+    }
+    /* line 2915, dev/sass/b2b.scss */
+    .product_view .product-preview__advantages-item {
+        width: 55px;
+        height: 55px;
+    }
+    /* line 2921, dev/sass/b2b.scss */
+    .product-preview__door-image-small {
+        -o-object-fit: contain;
+        object-fit: contain;
+    }
+    /* line 2924, dev/sass/b2b.scss */
+    .product-info-availability__item {
+        /*padding: 20px 0;*/
+        flex-direction: row;
+        font-size: 1rem;
+    }
+    /* line 2927, dev/sass/b2b.scss */
+    .product-info-availability__address {
+        width: 100%;
+        -webkit-box-ordinal-group: 2;
+        -webkit-order: 1;
+        -ms-flex-order: 1;
+        order: 1;
+        margin-bottom: 10px;
+    }
+    /* line 2932, dev/sass/b2b.scss */
+    .product-info-availability__hours {
+        width: 55%;
+        margin-bottom: 10px;
+        -webkit-box-ordinal-group: 3;
+        -webkit-order: 2;
+        -ms-flex-order: 2;
+        order: 2;
+    }
+    /* line 2937, dev/sass/b2b.scss */
+    .product-info-availability__link {
+        width: 45%;
+        -webkit-box-ordinal-group: 4;
+        -webkit-order: 3;
+        -ms-flex-order: 3;
+        order: 3;
+        -webkit-box-pack: start;
+        -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        padding-left: 0;
+    }
+
+    .product-info__header {
+        display: none !important;
+    }
+
+    .not-header-address {
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    .not-header-time {
+        font-size: 1rem;
+    }
+
+	.not-header-button > button { 
+    	    word-break: break-word;
+    /* font-size: 0.8rem; */
+    height: 38px;
+    line-height: 1;
+	}
+}
+@media screen and (max-width: 600px) {
+    .product-info-availability__item {
+        flex-flow: column;
+        padding-right: 0px;      
+    }
+    .product-info-availability__address {
+        padding-right: 0px;
+    }
+    .product-info-availability__hours {
+        width: 100%; 
+        padding-right: 0px;
+    }
+    .product-info-availability__link {
+        margin-bottom: 15px;
+    }
+}
+
+/* line 2945, dev/sass/b2b.scss */
+.popup-b2b__map-wrp {
+    height: 600px;
+}
+
+@media screen and (max-width: 600px) {
+    /* line 2951, dev/sass/b2b.scss */
+    .popup-b2b__map-wrp {
+        width: 100vw;
+    }
+}
+
+/* line 138, dev/sass/b2b.scss */
+.b2b-pages .b2b-wrapper .checkbox {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+/* line 141, dev/sass/b2b.scss */
+.b2b-pages .b2b-wrapper .checkbox._empty {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    margin-right: 10px;
+}
+
+/* line 145, dev/sass/b2b.scss */
+.b2b-pages .b2b-wrapper .checkbox._empty label {
+    min-width: 20px;
+    min-height: 20px;
+    padding: 0;
+}
+
+/* line 152, dev/sass/b2b.scss */
+.b2b-pages .b2b-wrapper .checkbox label {
+    padding-left: 30px;
+    pointer-events: none;
+    cursor: pointer;
+}
+
+/* line 157, dev/sass/b2b.scss */
+.b2b-pages .b2b-wrapper .checkbox label::before {
+    background-position: center;
+    -webkit-background-size: 14px 14px;
+    background-size: 14px;
+    background-repeat: no-repeat;
+}
+
+/* line 164, dev/sass/b2b.scss */
+.b2b-pages .b2b-wrapper .checkbox input[type='checkbox'],
+.b2b-pages .b2b-wrapper .checkbox input[type='radio'] {
+    display: block;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    cursor: pointer;
+}
+
+/* line 176, dev/sass/b2b.scss */
+.b2b-pages .b2b-wrapper .checkbox input[type='checkbox']:checked + label:before,
+.b2b-pages .b2b-wrapper .checkbox input[type='radio']:checked + label:before {
+    background-color: #ff652e;
+    background-image: url(../img/svg/check.svg);
+    background-position: center;
+    -webkit-background-size: 14px 14px;
+    background-size: 14px;
+    background-repeat: no-repeat;
+}
+
+/* line 186, dev/sass/b2b.scss */
+.b2b-pages .b2b-wrapper .icon {
+    width: 25px;
+    height: 25px;
+}
+
+/* line 191, dev/sass/b2b.scss */
+.b2b-pages .b2b-wrapper a,
+.b2b-pages .b2b-wrapper span {
+    display: inline-block;
+}
+
+/* line 196, dev/sass/b2b.scss */
+.b2b-pages .b2b-wrapper ul {
+    padding: 0;
+}
+
+/* line 199, dev/sass/b2b.scss */
+.b2b-pages .b2b-wrapper ul li {
+    margin: 0;
+}
+
+/* line 202, dev/sass/b2b.scss */
+.b2b-pages .b2b-wrapper ul li::before {
+    content: none;
+}
+
+/* line 210, dev/sass/b2b.scss */
+.b2b-wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+li.product-info-availability__item:before {
+    content: none !important;
+}

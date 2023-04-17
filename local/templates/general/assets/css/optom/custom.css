@@ -1,0 +1,30 @@
+.lp ul:not(.ul-list) li::before,
+.lp ol:not(.ol-list) li::before {
+    content: none;
+}
+
+.tabs-btn:hover,
+.slider-carousel__btn:hover {
+    background-color: unset;
+    border-color: unset;
+}
+
+.text__content {
+    margin-bottom: 0;
+}
+
+.tabs-btn__list::-webkit-scrollbar {
+    display: none;
+}
+
+section.text.text-content .text__content{
+    padding: unset;
+}
+.b24-form {
+        padding-left: 165px;
+    }
+@media screen and (max-width: 600px) {
+    .b24-form {
+        padding-left: 0px;
+    }
+}

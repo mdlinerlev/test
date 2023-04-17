@@ -1,0 +1,245 @@
+div.news-detail
+{
+	word-wrap: break-word;
+}
+div.news-detail img.detail_picture
+{
+	float:left;
+	margin:0 8px 6px 1px;
+}
+.news-date-time
+{
+	color:#486DAA;
+}
+
+.tooltip1 .tooltiptext::after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 20%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #555 transparent transparent transparent;
+}
+.tooltip1:hover .tooltiptext {
+	visibility: visible;
+	opacity: 1;
+}
+.card-projects__doors-zag{
+	font: 24px/28px Roboto, sans-serif;
+	text-transform: uppercase;
+	font-weight: 700;
+	color: #000;
+	margin-top: 50px;
+	margin-bottom: 20px;
+}
+.card-projects__doors-wrp .catalog-item{
+	width: 25%;
+}
+.card-projects__doors-wrp .catalog-item:hover .catalog-item__bg{
+	display: block;
+	width: 100%;
+}
+.card-projects__doors-wrp .catalog-item:hover .catalog-item__bottom{
+	display: block;
+
+}
+.card-projects__doors-wrp .catalog-item:hover .catalog-item__aside{
+	top: 0;
+	display: flex;
+	flex-wrap: wrap;
+	/*width: 100%;*/
+}
+.card-projects__doors-wrp .catalog-item:hover .catalog-item__aside .bx_item_detail_scu{
+	width: 100%;
+}
+.card-projects__doors-wrp .catalog-item:hover{
+	z-index: 11;
+}
+.card-projects__doors-wrp .catalog-item .tooltip1 .tooltiptext{
+	visibility: hidden;
+	width: 120px;
+	background-color: #555;
+	color: #fff;
+	text-align: center;
+	padding: 5px 0;
+	border-radius: 1px;
+	position: absolute;
+	z-index: 1;
+	bottom: 125%;
+	left: 20%;
+	margin-left: -20px;
+	opacity: 0;
+	transition: opacity 1s;
+}
+.card-projects__doors-wrp .catalog-item .tooltip1:hover .tooltiptext{
+	visibility: visible;
+	opacity: 1;
+}
+.card-projects__doors-wrp .catalog-item:nth-child(3) .catalog-item__aside {
+	right: auto;
+	left: -140px;
+	border-left: none;
+	border-right: 1px solid #ccc;
+	padding: 0 15px 0 0
+}
+.card-projects__doors-wrp .catalog-item:nth-child(3) .catalog-item__bg{
+	left: -160px;
+}
+.card-projects__doors-wrp .catalog-item:nth-child(4) .catalog-item__aside{
+	right: auto;
+	left: -140px;
+	border-left: none;
+	border-right: 1px solid #ccc;
+	padding: 0 15px 0 0
+}
+.card-projects__doors-wrp .catalog-item:nth-child(4) .catalog-item__bg{
+	left: -160px;
+}
+.card-projects__doors{
+	padding: 0 20px;
+	width: 100%;
+	float: left;
+}
+
+
+
+
+@media screen and (max-width: 991px){
+	.card-projects__doors-wrp .catalog-item{
+		width: 33.33%;
+	}
+	.card-projects__doors-zag{
+		margin-top: 20px;
+	}
+}
+
+@media screen and (max-width: 601px){
+	.card-projects__doors-wrp .catalog-item{
+		width: 50%;
+	}
+}
+
+
+/**/
+#projectCarousel, #navCarousel {
+	width: 50%;
+	float: left;
+	margin: 0 20px 20px 0;
+}
+
+#navCarousel {
+	padding: 0 100px;
+}
+
+#projectCarousel .carousel__slide {
+	width: 100%;
+	padding: 0;
+}
+
+#navCarousel .carousel__slide {
+	width: 100px;
+	height: 100px;
+	overflow: initial;
+	margin: 0 5px;
+	cursor: pointer;
+}
+
+
+#navCarousel .carousel__slide img {
+	width: 100%;
+	height: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
+}
+
+#projectCarousel .carousel__slide.is-selected {
+	max-width: calc(100% + 10px);
+	-webkit-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+}
+
+#projectCarousel .carousel__slide {
+	display: flex;
+	align-items: center;
+	-webkit-transition-delay: 0s;
+	margin: 0;
+}
+
+#projectCarousel .carousel__slide img {
+	max-height: 60vh;
+	margin: auto;
+	width: 100%;
+	height: 100%;
+	-o-object-fit: cover;
+	object-fit: contain;
+}
+
+#projectCarousel .carousel__button.is-prev {
+	left: -1.5rem;
+}
+
+#projectCarousel .carousel__button.is-next {
+	right: -1.5rem;
+}
+
+#projectCarousel .carousel__dots {
+	position: relative;
+}
+
+#projectCarousel .carousel__button:focus {
+	outline: none;
+	box-shadow: 0 0 0 4px #A78BFA;
+}
+
+#projectCarousel button.carousel__button {
+	background-color: #fff;
+	color: #000;
+	border-color: #ee490e;
+}
+
+#projectCarousel button.carousel__button:hover {
+	background-color: #ee490e;
+	color: #fff;
+	border-color: #ee490e;
+}
+
+@media (max-width: 990px){
+	#navCarousel .carousel__slide {
+		width: 45px;
+		height: 45px;
+		overflow: initial;
+		margin: 0 5px;
+		cursor: pointer;
+		padding: 0;
+	}
+}
+
+@media (max-width: 768px){
+	#projectCarousel, #navCarousel {
+		width: 100%;
+	}
+	#projectCarousel .carousel__slide {
+		padding: 0;
+	}
+	#navCarousel {
+		padding: 0 50px;
+	}
+	#projectCarousel .carousel__slide img {
+		max-height: 100%;
+	}
+}
+
+@media (max-width: 990px){
+	#projectCarousel {
+		max-width: 100%;
+		float: left;
+		padding: 0 0 0 0;
+	}
+}
+
+.page-title-section {
+	display: block !important;
+}

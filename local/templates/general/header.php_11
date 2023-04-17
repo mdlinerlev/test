@@ -1,0 +1,626 @@
+<?
+if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true)
+    die();
+if (preg_match('#^/catalog/dlya-dverey/.*#Uui', CURPAGE)) {
+    CHTTP::SetStatus("404 Not Found");
+    @define("ERROR_404", "Y");
+}
+CJSCore::Init(array('ajax', 'window'));
+require_once 'inc/template-helper.php';
+
+$curPage = $APPLICATION->GetCurPage(true);
+$objCatalog = new CCatalogRU();
+
+define('KOEF_OLD_PRICE', 10000);
+
+?>
+<!DOCTYPE html>
+<html xml:lang="<?= LANGUAGE_ID ?>" lang="<?= LANGUAGE_ID ?>">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
+    <meta name="google-site-verification" content="SsPqYbONcpXhBweNbd_ocd6eGymmhS0FI3tnwcmlgzM" />
+    <link rel="shortcut icon" type="image/x-icon" href="<?= SITE_DIR ?>favicon.ico"/>
+    <? $APPLICATION->ShowHead(); ?>
+    <title><? $APPLICATION->ShowTitle() ?></title>
+    <script src="https://webtracking-v01.bpmonline.com/JS/track-cookies.js"></script>
+    <script src="https://webtracking-v01.bpmonline.com/JS/create-object.js"></script>
+    <?
+    $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/assets/css/jquery-ui.min.css');
+    $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/assets/css/magnific-popup.css');
+    $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/assets/css/owl.carousel.min.css');
+    $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/assets/css/styles.css');
+    #$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . '/assets/css/styles.all.min.css');
+    $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/assets/css/btn-zv.css");
+    $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/assets/js/jquery-2.2.1.min.js");
+    $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/assets/js/imagesloaded.pkgd.min.js");
+    $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/assets/js/jquery.easing.1.3.js");
+    $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/assets/js/jquery.magnific-popup.min.js");
+    $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/assets/js/jquery.mask.min.js");
+    $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/assets/js/jquery.multifile.pack.js");
+    $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/assets/js/jquery.placeholder-enhanced.min.js");
+    $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/assets/js/jquery.validate.min.js");
+    $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/assets/js/jquery-ui.min.js");
+    $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/assets/js/jquery-ui.touch-punch.min.js");
+    $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/assets/js/owl.carousel.min.js");
+    $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/assets/js/scripts.js");
+    $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/assets/js/jquery.maskedinput.min.js");
+    $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/assets/js/phone-cta.js");
+    ?>
+    <script src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (d, w, c) {
+            (w[c] = w[c] || []).push(function () {
+                try {
+                    w.yaCounter18399610 = new Ya.Metrika({
+                        id: 18399610,
+                        clickmap: true,
+                        trackLinks: true,
+                        accurateTrackBounce: true,
+                        webvisor: true
+                    });
+                } catch (e) {
+                }
+            });
+
+            var n = d.getElementsByTagName("script")[0],
+                s = d.createElement("script"),
+                f = function () {
+                    n.parentNode.insertBefore(s, n);
+                };
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+            if (w.opera == "[object Opera]") {
+                d.addEventListener("DOMContentLoaded", f, false);
+            } else {
+                f();
+            }
+        })(document, window, "yandex_metrika_callbacks");
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/18399610" style="position:absolute; left:-9999px;" alt=""/></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '846137855744542');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=846137855744542&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+</head>
+<body class="index _show-msg-on-leave">
+<div class="offcanvas">
+    <aside class="offcanvas__menu">
+        <div class="offcanvas-menu__inner">
+            <section class="offcanvas-menu__search">
+                <form action="<?= SITE_DIR ?>catalog/" method="get">
+                    <div class="offcanvas-menu-search__input-container">
+                        <label for="mobile-menu-search" class="sr-only">Поиск</label>
+                        <input type="text" id="mobile-menu-search" name="q" placeholder="Поиск"
+                               class="offcanvas-menu-search__input"/>
+                    </div>
+                    <button type="submit"
+                            class="offcanvas-menu-search__button offcanvas-menu-search__button--submit button">
+                        <span></span>
+                    </button>
+                </form>
+            </section>
+            <div class="offcanvas-menu__shop-links">
+                <? // корзина
+                require 'inc/basket_line.php';
+                ?>
+                <a class="offcanvas-menu-shop-links__link offcanvas-menu-shop-links__link--comparsion">
+                    <div class="offcanvas-menu-shop-links__text">Сравнение
+
+                    </div>
+                </a>
+            </div>
+        </div>
+    </aside>
+    <div class="offcanvas__shim">
+    </div>
+</div>
+<div class="page-wrapper" id="bx_eshop_wrap">
+    <header class="header">
+        <section class="header-fixed">
+            <div id="panel"><? $APPLICATION->ShowPanel(); ?></div>
+
+            <div class="content-container">
+                <a class="header-fixed__menu-button">Меню
+                </a>
+                <a class="header-fixed__button header-fixed__button--catalog button"><span>Каталог</span>
+                </a>
+                <div class="btns">
+                    <a href="#" class="header-text-item__callback" id="btns-link">Консультация</a>
+                </div>
+                <div class="header-fixed__right">
+                    <div class="header-fixed__phones">
+                        <div class="header-fixed-phones__number">
+                            <?
+                            $APPLICATION->IncludeComponent(
+                                "bitrix:main.include", "", Array(
+                                    "AREA_FILE_SHOW" => "file",
+                                    "AREA_FILE_SUFFIX" => "inc",
+                                    "EDIT_TEMPLATE" => "",
+                                    "PATH" => "/include/tel1.php"
+                                )
+                            );
+                            ?>
+                        </div>
+                        /
+                        <div class="header-fixed-phones__number">
+                            <?
+                            $APPLICATION->IncludeComponent(
+                                "bitrix:main.include", "", Array(
+                                    "AREA_FILE_SHOW" => "file",
+                                    "AREA_FILE_SUFFIX" => "inc",
+                                    "EDIT_TEMPLATE" => "",
+                                    "PATH" => "/include/tel2.php"
+                                )
+                            );
+                            ?>
+                        </div>
+                    </div>
+                    <section class="header-fixed__search">
+                        <form action="<?= SITE_DIR ?>catalog/" method="get">
+                            <div class="header-fixed-search__input-container">
+                                <label for="fixed-header-search" class="sr-only">Поиск</label>
+                                <input type="text" id="fixed-header-search" name="q"
+                                       class="header-fixed-search__input"/>
+                            </div>
+                            <button type="submit"
+                                    class="header-fixed-search__button header-fixed-search__button--submit button">
+                            </button>
+                        </form>
+                    </section>
+                    <div class="header-fixed__shop-links">
+                        <?
+                        $APPLICATION->IncludeComponent("bitrix:catalog.compare.list", "fixed_top_compare", Array(
+                            "ACTION_VARIABLE" => "",    // Название переменной, в которой передается действие
+                            "AJAX_MODE" => "N",    // Включить режим AJAX
+                            "AJAX_OPTION_ADDITIONAL" => "",    // Дополнительный идентификатор
+                            "AJAX_OPTION_HISTORY" => "N",    // Включить эмуляцию навигации браузера
+                            "AJAX_OPTION_JUMP" => "N",    // Включить прокрутку к началу компонента
+                            "AJAX_OPTION_STYLE" => "Y",    // Включить подгрузку стилей
+                            "COMPARE_URL" => "/catalog/compare/",    // URL страницы с таблицей сравнения
+                            "DETAIL_URL" => "",    // URL, ведущий на страницу с содержимым элемента раздела
+                            "IBLOCK_ID" => "2",    // Инфоблок
+                            "IBLOCK_TYPE" => "catalog",    // Тип инфоблока
+                            "NAME" => "CATALOG_COMPARE_LIST",    // Уникальное имя для списка сравнения
+                            "POSITION" => "top left",
+                            "POSITION_FIXED" => "N",    // Отображать список сравнения поверх страницы
+                            "PRODUCT_ID_VARIABLE" => "id",    // Название переменной, в которой передается код товара для покупки
+                            "COMPONENT_TEMPLATE" => "top_compare"
+                        ),
+                            false
+                        );
+                        ?>
+                        <?
+                        // статическая корзина
+                        require 'inc/basket.php';
+                        ?>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="header-top">
+            <div class="content-container">
+                <a class="header__menu-button">Меню
+                </a>
+                <div class="main-menu">
+                    <a class="main-menu__link main-menu__link--back">Назад в меню
+                    </a>
+                    <nav class="main-menu__container main-menu__container--level1">
+                        <?
+                        // верхнее меню
+                        require 'inc/top_menu.php';
+                        ?>
+                    </nav>
+                </div>
+                <div class="header__languages">
+                    <? /* if (SITE_ID == 's1') { ?>
+                                <span class="header-languages__link header-languages__link--active">Рус
+                                </span>/
+                                <a href="javascript:void(0)" class="header-languages__link">Укр
+                                </a>
+<? } else { ?>
+                                <a href="javascript:void(0)" class="header-languages__link">Рус
+                                </a>/
+                                <span class="header-languages__link header-languages__link--active">Укр</span>
+<? } */ ?>
+                </div>
+            </div>
+        </section>
+        <section class="header-middle">
+            <div class="content-container">
+                <div class="header__logo">
+                    <? if ($curPage != SITE_DIR . "index.php"): ?>
+                        <?
+                        $APPLICATION->IncludeComponent(
+                            "bitrix:main.include", "", Array(
+                                "AREA_FILE_SHOW" => "file",
+                                "AREA_FILE_SUFFIX" => "inc",
+                                "EDIT_TEMPLATE" => "",
+                                "PATH" => "/include/company_logo.php"
+                            )
+                        );
+                        ?>
+                    <? else: ?>
+                        <?
+                        $APPLICATION->IncludeComponent(
+                            "bitrix:main.include", "", Array(
+                                "AREA_FILE_SHOW" => "file",
+                                "AREA_FILE_SUFFIX" => "inc",
+                                "EDIT_TEMPLATE" => "",
+                                "PATH" => "/include/company_logo_index.php"
+                            )
+                        );
+                        ?>
+                    <? endif; ?>
+                    <?
+                    $APPLICATION->IncludeComponent(
+                        "bitrix:main.include", "", Array(
+                            "AREA_FILE_SHOW" => "file",
+                            "AREA_FILE_SUFFIX" => "inc",
+                            "EDIT_TEMPLATE" => "",
+                            "PATH" => "/include/company_about.php"
+                        )
+                    );
+                    ?>
+                </div>
+                <div class="header__text-items">
+                    <div class="header__text-item header__text-item--worktime">
+                        <div class="header-text-item__time">
+                            <?
+                            $APPLICATION->IncludeComponent(
+                                "bitrix:main.include", "", Array(
+                                    "AREA_FILE_SHOW" => "file",
+                                    "AREA_FILE_SUFFIX" => "inc",
+                                    "EDIT_TEMPLATE" => "",
+                                    "PATH" => "/include/work_time.php"
+                                )
+                            );
+                            ?>
+                        </div>
+                        <small class="header-text-item__comment">
+                            <?
+                            $APPLICATION->IncludeComponent(
+                                "bitrix:main.include", "", Array(
+                                    "AREA_FILE_SHOW" => "file",
+                                    "AREA_FILE_SUFFIX" => "inc",
+                                    "EDIT_TEMPLATE" => "",
+                                    "PATH" => "/include/work_day.php"
+                                )
+                            );
+                            ?>
+                            <span>           <?
+                                $APPLICATION->IncludeComponent("bitrix:main.include", "", array(
+                                    "AREA_FILE_SHOW" => "file",
+                                    "AREA_FILE_SUFFIX" => "inc",
+                                    "EDIT_TEMPLATE" => "",
+                                    "PATH" => "/include/work_day1.php"
+                                ),
+                                    false,
+                                    array(
+                                        "ACTIVE_COMPONENT" => "N"
+                                    )
+                                );
+                                ?> </span>
+                        </small>
+                    </div>
+                    <div class="header__text-item header__text-item--phone">
+                        <div class="header-text-item__phone">
+                            <?
+                            $APPLICATION->IncludeComponent(
+                                "bitrix:main.include", "", Array(
+                                    "AREA_FILE_SHOW" => "file",
+                                    "AREA_FILE_SUFFIX" => "inc",
+                                    "EDIT_TEMPLATE" => "",
+                                    "PATH" => "/include/tel1.php"
+                                )
+                            );
+                            ?>
+
+
+                        </div>
+                        <small class="header-text-item__comment">
+                            <?
+                            $APPLICATION->IncludeComponent("bitrix:main.include", "", array(
+                                "AREA_FILE_SHOW" => "file",
+                                "AREA_FILE_SUFFIX" => "inc",
+                                "EDIT_TEMPLATE" => "",
+                                "PATH" => "/include/oper1.php"
+                            ),
+                                false,
+                                array(
+                                    "ACTIVE_COMPONENT" => "N"
+                                )
+                            );
+                            ?>
+                        </small>
+                    </div>
+                    <div class="header__text-item header__text-item--phone header__text-item--second">
+                        <div class="header-text-item__phone">
+                            <?
+                            $APPLICATION->IncludeComponent(
+                                "bitrix:main.include", "", Array(
+                                    "AREA_FILE_SHOW" => "file",
+                                    "AREA_FILE_SUFFIX" => "inc",
+                                    "EDIT_TEMPLATE" => "",
+                                    "PATH" => "/include/tel2.php"
+                                )
+                            );
+                            ?>
+
+                        </div>
+                        <small class="header-text-item__comment">
+                            <?
+                            $APPLICATION->IncludeComponent(
+                                "bitrix:main.include", "", Array(
+                                    "AREA_FILE_SHOW" => "file",
+                                    "AREA_FILE_SUFFIX" => "inc",
+                                    "EDIT_TEMPLATE" => "",
+                                    "PATH" => "/include/oper2.php"
+                                )
+                            );
+                            ?>
+                        </small>
+                    </div>
+                    <!-- div class="header__text-item header__text-item--call">
+                        <a class="header-text-item__callback popup-link" data-popup="popup--callback">
+                            <span class="header-text-item__callback-inner">Перезвоните мне</span>
+                        </a>
+                    </div -->
+                    <div class="header__text-item header__text-item--call">
+                        <a class="header-text-item__callback">
+                            <span class="header-text-item__callback-inner">Перезвоните мне</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="header__shop-links">
+                    <?
+                    $APPLICATION->IncludeComponent(
+                        "bitrix:catalog.compare.list",
+                        "top_compare",
+                        array(
+                            "ACTION_VARIABLE" => "",
+                            "AJAX_MODE" => "N",
+                            "AJAX_OPTION_ADDITIONAL" => "",
+                            "AJAX_OPTION_HISTORY" => "N",
+                            "AJAX_OPTION_JUMP" => "N",
+                            "AJAX_OPTION_STYLE" => "Y",
+                            "COMPARE_URL" => "/catalog/compare/",
+                            "DETAIL_URL" => "",
+                            "IBLOCK_ID" => "2",
+                            "IBLOCK_TYPE" => "catalog",
+                            "NAME" => "CATALOG_COMPARE_LIST",
+                            "POSITION" => "top left",
+                            "POSITION_FIXED" => "N",
+                            "PRODUCT_ID_VARIABLE" => "id",
+                            "COMPONENT_TEMPLATE" => "top_compare"
+                        ),
+                        false
+                    );
+                    ?>
+                    <?
+                    // корзина2
+                    require 'inc/basket_line2.php';
+                    ?>
+                </div>
+            </div>
+        </section>
+        <section class="header-bottom">
+            <div class="content-container">
+                <a class="header__button header__button--catalog-button button"><span>Каталог товаров</span>
+                </a>
+                <div class="header__catalog-menu">
+                    <a class="header-catalog-menu__button">Каталог
+                    </a>
+                    <a class="header-catalog-menu__link header-catalog-menu__link--back"><span class="back-menu">Назад в меню</span><span
+                                class="back-catalog">Назад в каталог</span>
+                    </a>
+                    <?
+                    // меню
+                    require 'inc/main_menu.php';
+                    ?>
+                </div>
+                <div class="header__search">
+                    <?
+                    // поиск
+                    require 'inc/search.php';
+                    ?>
+                </div>
+            </div>
+        </section>
+    </header>
+    <section class="main-content">
+        <? if ($curPage != SITE_DIR . "index.php"): ?>
+            <section class="breadcrumbs">
+                <div class="content-container">
+                    <?
+                    $APPLICATION->IncludeComponent("bitrix:breadcrumb", "breadcrumbs", array(
+                        "START_FROM" => "0",
+                        "PATH" => "",
+                        "SITE_ID" => "-"
+                    ), false, Array('HIDE_ICONS' => 'Y')
+                    );
+                    ?>
+                </div>
+            </section>
+            <? $isCatalogPage = preg_match("~^" . SITE_DIR . "catalog/~", $curPage); ?>
+            <? $isNewsPage = preg_match("~^" . SITE_DIR . "about/news/~", $curPage); ?>
+            <? $isArticlePage = preg_match("~^" . SITE_DIR . "articles/~", $curPage); ?>
+            <? // if (isDetailCatalogPage()): ?>
+            <? if ( $isNewsPage || $isArticlePage): // Добавление canonical?>
+                <?if ($APPLICATION->GetCurPageParam() != $curPage) : //условие когда пагинация?>
+                    <? $APPLICATION->AddHeadString('<link rel="canonical" href="' . urlDomain() . $APPLICATION->GetCurPage(false) .'all/'. '" />'); ?>
+                <?else :?>
+                    <?$APPLICATION->AddHeadString('<link rel="canonical" href="' . urlDomain() . $APPLICATION->GetCurPage(false) .'" />'); ?>
+                <? endif;?>
+                <? if ($isNewsPage || $isArticlePage ) : ?>
+                    <section class="page-title-section">
+                        <div class="content-container">
+                            <div class="page-title">
+                                <h1 class="page-title__title" id="pagetitle"><?= $APPLICATION->ShowTitle(false); ?></h1>
+                            </div>
+                        </div>
+                    </section>
+                <? endif; ?>
+            <? elseif ($isCatalogPage): ?>
+                <?// $APPLICATION->AddHeadString('<link rel="canonical" href="' . urlDomain() .'/catalog/all/'. '" />'); ?>
+            <? elseif (!$isCatalogPage): ?>
+                <?$APPLICATION->AddHeadString('<link rel="canonical" href="'.urlDomain().$APPLICATION->GetCurPage(false). '" />'); ?>
+                <section class="page-title-section">
+                    <div class="content-container">
+                        <div class="page-title">
+                            <h1 class="page-title__title" id="pagetitle"><?= $APPLICATION->ShowTitle(false); ?></h1>
+                        </div>
+                    </div>
+                </section>
+                <? $isAktsiiPage = preg_match("~^" . SITE_DIR . "aktsii/index~", $curPage); ?>
+                <? if ($isAktsiiPage): ?>
+                    <section class="index-slider">
+                        <div class="content-container">
+                            <?
+                            // слайдер
+                            require 'inc/slider_aktsii.php';
+                            ?>
+                            <!--мобильный слайдер начало-->
+                            <section class="index-slider2" style="display: none;">
+                                <div class="content-container">
+                                    <div id="bx_incl_area_20">
+                                        <? require 'inc/mslider_aktsii.php'; ?>
+                                    </div>
+                                </div>
+                            </section>
+                            <!--мобильный слайдер конец-->
+                        </div>
+                    </section><br>
+                <? else: ?>
+                <? endif; ?>
+
+            <? else: ?>
+
+            <? endif; ?>
+        <? else: ?>
+            <?$APPLICATION->AddHeadString('<link rel="canonical" href="'.urlDomain().'" />'); ?>
+            <section class="index-slider">
+                <div class="content-container">
+                    <?
+                    // слайдер
+                    require 'inc/slider.php';
+                    ?>
+
+                    <!--мобильный слайдер начало-->
+                    <section class="index-slider2" style="display: none;">
+                        <div class="content-container">
+                            <div id="bx_incl_area_20">
+                                <? require 'inc/mslider.php'; ?>
+                            </div>
+                        </div>
+                    </section><!--мобильный слайдер конец-->
+
+
+                    <div class="index-slider__bottom">
+                        <div class="index-slider-bottom__element">
+                            <?
+                            $APPLICATION->IncludeComponent(
+                                "bitrix:main.include", "", Array(
+                                    "AREA_FILE_SHOW" => "file",
+                                    "AREA_FILE_SUFFIX" => "inc",
+                                    "EDIT_TEMPLATE" => "",
+                                    "PATH" => "/include/slider_icon_1.php"
+                                )
+                            );
+                            ?>
+                        </div>
+                        <div class="index-slider-bottom__element">
+                            <?
+                            $APPLICATION->IncludeComponent(
+                                "bitrix:main.include", "", Array(
+                                    "AREA_FILE_SHOW" => "file",
+                                    "AREA_FILE_SUFFIX" => "inc",
+                                    "EDIT_TEMPLATE" => "",
+                                    "PATH" => "/include/slider_icon_2.php"
+                                )
+                            );
+                            ?>
+                        </div>
+                        <div class="index-slider-bottom__element">
+                            <?
+                            $APPLICATION->IncludeComponent(
+                                "bitrix:main.include", "", Array(
+                                    "AREA_FILE_SHOW" => "file",
+                                    "AREA_FILE_SUFFIX" => "inc",
+                                    "EDIT_TEMPLATE" => "",
+                                    "PATH" => "/include/slider_icon_3.php"
+                                )
+                            );
+                            ?>
+                        </div>
+                        <div class="index-slider-bottom__element">
+                            <?
+                            $APPLICATION->IncludeComponent(
+                                "bitrix:main.include", "", Array(
+                                    "AREA_FILE_SHOW" => "file",
+                                    "AREA_FILE_SUFFIX" => "inc",
+                                    "EDIT_TEMPLATE" => "",
+                                    "PATH" => "/include/slider_icon_4.php"
+                                )
+                            );
+                            ?>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        <? endif ?>
+
+        <? if (($curPage != SITE_DIR . "index.php") && (!$isCatalogPage) && !preg_match('#^/personal/cart/.*#Uui', CURPAGE) && !preg_match('#^/personal/order/make/.*#Uui', CURPAGE) && !preg_match('#^/catalog/compare/.*#Uui', CURPAGE)){ ?>
+
+        <section class="text text-content">
+            <div class="content-container">
+                <?
+                // левое меню
+                require 'inc/left_menu.php';
+                ?>
+
+                <?
+                //                                    $textContentClass =
+                //                                        !preg_match('#^/about/comments/$#', CURPAGE) &&
+                //                                        !preg_match('#^/about/news/$#', CURPAGE) &&
+                //                                        !preg_match('#^/about/realizovannye-proekty/$#', CURPAGE) &&
+                //                                        !preg_match('#^/addresses/.*#Uui', CURPAGE) &&
+                //                                        !preg_match('#^/contacts/.*#Uui', CURPAGE) &&
+                //                                        !preg_match('#razdvizhnye-dveri/.*#Uui', CURPAGE) &&
+                //                                        !preg_match('#^/aktsii/.*#Uui', CURPAGE) &&
+                //                                        !preg_match('#^/rasprodazha/.*#Uui', CURPAGE) &&
+                //                                            !preg_match('#^/personal/.*#Uui', CURPAGE)&&
+                //                                            !preg_match('#^/new/.*#Uui', CURPAGE)&&
+                //                                            !preg_match('#^/hit/.*#Uui', CURPAGE)&&
+                //                                            !preg_match('#^/catalog/compare/.*#Uui', CURPAGE)
+                //
+                //                                        ? 'text__content' : 'left'; #Класс text__content макс. шириной 900px
+                $textContentClass = 'text__content';
+                ?>
+
+                <div class="<?= $textContentClass ?>">
+
+                    <? } ?>
+
+
+                    <? /*<pre><?print_r($curPage)?></pre>*/ ?>
+

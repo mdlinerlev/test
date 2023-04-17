@@ -1,0 +1,1 @@
+"use strict";var ieRedirect=function(){(/MSIE 9/i.test(navigator.userAgent)||/rv:11.0/i.test(navigator.userAgent)||/rv:10.0/i.test(navigator.userAgent))&&(document.body.className="ie",window.location.pathname="./ie.html")};ieRedirect();

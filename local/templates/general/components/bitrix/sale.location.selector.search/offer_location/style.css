@@ -1,0 +1,13 @@
+
+.location-block-wrapper{
+    width: 50%;
+}
+@media screen and (max-width: 959px){
+.location-block-wrapper {
+    width: 100%;
+    max-width: 300px;
+}}
+@media screen and (max-width: 599px){
+.location-block-wrapper {
+    max-width: none;
+}}

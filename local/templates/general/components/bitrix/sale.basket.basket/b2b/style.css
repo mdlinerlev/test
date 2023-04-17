@@ -1,0 +1,14 @@
+.status .product-top__availability_not {
+    top: -8px;
+}
+.stock_button{
+    display: flex;
+    justify-content: space-between;
+}
+.stock_button input{
+    width: 50%;
+}
+.b2b-basket__total .stock_button .button{
+    width: 50%;
+    margin-left: 10px;
+}

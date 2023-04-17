@@ -1,0 +1,14 @@
+.b2b-pages .b2b-wrapper .js-editable._edit {
+    border: 1px solid #ebebeb;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.b2b-pages .b2b-wrapper .js-editable textarea {
+    height: auto;
+    overflow: hidden;
+}
+
+.b2b-pages .b2b-wrapper .js-editable._edit textarea {
+    overflow: auto;
+}

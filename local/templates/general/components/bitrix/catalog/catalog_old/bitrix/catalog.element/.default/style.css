@@ -1,0 +1,87 @@
+.wide {
+  width: 100vw;
+  min-width: 100%;
+  margin-left: calc(50% - 50vw);
+}
+[data-offer-id] {
+  display: none;
+  visibility: hidden;
+}
+.hidden {
+  display: none !important;
+}
+.select-sku-value.active {
+  border: 1px solid red;
+}
+.simple-quantity {
+  text-align: center;
+  height: 37px;
+  line-height: 37px;
+  vertical-align: middle;
+  border-color: transparent !important;
+}
+.product-preview__small-images {
+  display: none;
+}
+@media screen and (max-width: 599px) {
+  .product-preview__small-images {
+    display: block;
+  }
+  .product-preview__big-images {
+    display: none;
+  }
+}
+.product-top-compare__text::after{
+    position: relative!important;
+    bottom: 10px!important;
+}
+
+.product-top__availability_not{
+
+    display: inline-block;
+    padding-left: 36px;
+    color: #009e45;
+    position: relative;
+    line-height: 40px;
+
+}
+.product-top__availability_not:before{
+    top: 7px;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #e03629;
+    content: '';
+    position: absolute;
+    display: block;
+}
+.product-top__availability_not:after {
+    top: 11px;
+    left: 4px;
+    background: url(/bitrix/templates/general/assets/css/../images/sprites.svg) 68.38709677419355% 85.21126760563381%;
+    width: 18px;
+    height: 16px;
+    content: '';
+    position: absolute;
+    display: block;
+}
+
+.tooltip {
+
+    width: 290px!important;
+
+}
+
+/*.tooltip-link.tooltip-top:hover .tooltip {
+    top: -60px!important;
+     bottom:  50px!important;
+}
+
+.tooltip:after {
+    content: '';
+    position: absolute;
+    display: block;
+    left: 86%!important;
+    margin-left: -4px;
+}*/

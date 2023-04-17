@@ -1,0 +1,41 @@
+.wide {
+	width: 100vw;
+	min-width: 100%;
+	margin-left: ~"calc(50% - 50vw)";
+}
+
+[data-offer-id] {
+	display: none;
+	visibility: hidden;
+}
+
+.hidden {
+	display: none !important;
+}
+
+.select-sku-value.active {
+	border: 1px solid red;
+}
+
+.simple-quantity {
+	text-align: center;
+	height: 37px;
+	line-height: 37px;
+	vertical-align: middle;
+	border-color: transparent !important;
+}
+
+.product-preview__small-images {
+	display: none;
+}
+
+@media screen and (max-width: 599px) {
+	.product-preview__small-images {
+		display: block;
+	}
+
+	.product-preview__big-images {
+		display: none;
+	}
+
+}
