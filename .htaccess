@@ -1,0 +1,320 @@
+RewriteEngine On
+RewriteBase /
+Options -Indexes 
+ErrorDocument 404 /404.php
+
+Options +FollowSymLinks
+RewriteEngine On
+RewriteBase /
+
+RewriteEngine On
+RewriteBase /
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteCond %{REQUEST_URI} !^/bitrix/
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+RewriteCond %{THE_REQUEST} //
+RewriteCond %{REQUEST_URI} !^/bitrix/
+RewriteRule .* /$0 [R=301,L]
+
+Redirect 301 /about/news/18867/ https://belwooddoors.ru/articles/19093/
+Redirect 301 /about/news/18648/ https://belwooddoors.ru/articles/19094/
+Redirect 301 /about/news/18225/ https://belwooddoors.ru/articles/19095/
+Redirect 301 /about/news/18032/ https://belwooddoors.ru/articles/19096/
+Redirect 301 /about/news/18031/ https://belwooddoors.ru/articles/19097/
+Redirect 301 /about/news/17804/ https://belwooddoors.ru/articles/19098/
+Redirect 301 /about/stati/16176/ https://belwooddoors.ru/articles/16176/
+Redirect 301 /rasprodazha/ https://sale.belwooddoors.ru/
+Redirect 301 /kredit-i-rassrochka/ https://belwooddoors.ru/oplata/
+Redirect 301 /catalog/mezhkomnatnye_dveri/ekonom/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/
+#Redirect 301 /catalog/mezhkomnatnye_dveri/premium/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/
+Redirect 301 /catalog/vkhodnye_dveri/vhodnye-ot-0-do-40000/ https://belwooddoors.ru/catalog/vkhodnye_dveri/
+Redirect 301 /catalog/vkhodnye_dveri/vkhodnye-nedorogie/ https://belwooddoors.ru/catalog/vkhodnye_dveri/
+Redirect 301 /catalog/vkhodnye_dveri/tamburnye/ https://belwooddoors.ru/catalog/vkhodnye_dveri/
+Redirect 301 /catalog/vkhodnye_dveri/tekhnicheskie/ https://belwooddoors.ru/catalog/vkhodnye_dveri/
+Redirect 301 /catalog/vkhodnye_dveri/mdf/ https://belwooddoors.ru/catalog/vkhodnye_dveri/
+Redirect 301 /catalog/vkhodnye_dveri/vkhodnye-laminat/ https://belwooddoors.ru/catalog/vkhodnye_dveri/
+Redirect 301 /catalog/vkhodnye_dveri/v-ofis/ https://belwooddoors.ru/catalog/vkhodnye_dveri/
+Redirect 301 /catalog/vkhodnye_dveri/vkhodnye-ot-40000-do-50000/ https://belwooddoors.ru/catalog/vkhodnye_dveri/
+Redirect 301 /catalog/vkhodnye_dveri/vkhodnye-ot-50000-do-60000/ https://belwooddoors.ru/catalog/vkhodnye_dveri/
+Redirect 301 /catalog/vkhodnye_dveri/vkhodnye-ot-60000-i-vyshe/ https://belwooddoors.ru/catalog/vkhodnye_dveri/
+Redirect 301 /catalog/vkhodnye_dveri/elitnye/ https://belwooddoors.ru/catalog/vkhodnye_dveri/
+Redirect 301 /catalog/vkhodnye_dveri/vnutrennie/ https://belwooddoors.ru/catalog/vkhodnye_dveri/
+Redirect 301 /catalog/vkhodnye_dveri/naruzhnye/ https://belwooddoors.ru/catalog/vkhodnye_dveri/
+Redirect 301 /catalog/vkhodnye_dveri/uteplennye/ https://belwooddoors.ru/catalog/vkhodnye_dveri/
+Redirect 301 /catalog/vkhodnye_dveri/dvukhstvorchatye/ https://belwooddoors.ru/catalog/vkhodnye_dveri/
+Redirect 301 /catalog/vkhodnye_dveri/s-patinoy/ https://belwooddoors.ru/catalog/vkhodnye_dveri/
+Redirect 301 /catalog/vkhodnye_dveri/s-kovkoy/ https://belwooddoors.ru/catalog/vkhodnye_dveri/
+Redirect 301 /catalog/vkhodnye_dveri/vkhodnye-so-steklom/ https://belwooddoors.ru/catalog/vkhodnye_dveri/
+Redirect 301 /catalog/vkhodnye_dveri/v-podezd/ https://belwooddoors.ru/catalog/vkhodnye_dveri/
+Redirect 301 /catalog/vkhodnye_dveri/c-nerzhaveyushchim-porogom/ https://belwooddoors.ru/catalog/vkhodnye_dveri/
+
+Redirect 301 /catalog/spetsialnye-dv/ https://special.belwooddoors.com/
+
+Redirect 301 /catalog/mezhkomnatnye_dveri/shabli-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/polipropilen/maximum/shabli-polotno-glukhoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/ameli-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/polipropilen/maximum/ameli-osteklennoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/ansi-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/polipropilen/maximum/ansi-osteklennoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/madrid-05-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/polipropilen/maximum/madrid-05-osteklennoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/mirella-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/ekoshpon/maximum/mirella-osteklennoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/mirella-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/ekoshpon/maximum/mirella-polotno-glukhoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/modena-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/ekoshpon/maximum/modena-osteklennoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/chelsi-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/ekoshpon/maximum/chelsi-osteklennoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/chelsi-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/ekoshpon/maximum/chelsi-polotno-glukhoe/
+
+Redirect 301 /catalog/mezhkomnatnye_dveri/laynvud-2-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/shpon/linewood/laynvud-2-polotno-glukhoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/laynvud-1-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/shpon/linewood/laynvud-1-polotno-glukhoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/kapricheza-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/shpon/optima/kapricheza-osteklennoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/kapricheza-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/shpon/optima/kapricheza-polotno-glukhoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/klassika-lyuks-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/shpon/optima/klassika-lyuks-osteklennoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/karolina-l-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/shpon/optima/karolina-l-polotno-glukhoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/klassika-lyuks-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/shpon/optima/klassika-lyuks-polotno-glukhoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/malta-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/shpon/optima/malta-osteklennoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/malta-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/shpon/optima/malta-polotno-glukhoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/napoleon-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/shpon/optima/napoleon-osteklennoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/napoleon-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/shpon/optima/napoleon-polotno-glukhoe/
+
+Redirect 301 /catalog/mezhkomnatnye_dveri/kapricheza-l-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/ekoshpon/optima/kapricheza-l-osteklennoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/kapricheza-l-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/ekoshpon/optima/kapricheza-l-polotno-glukhoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/madrid-04-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/ekoshpon/maximum/madrid-04-osteklennoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/perfekta-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/ekoshpon/optima/perfekta-osteklennoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/perfekta-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/ekoshpon/optima/perfekta-polotno-glukhoe/
+
+Redirect 301 /catalog/mezhkomnatnye_dveri/split-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/narvika/split-polotno-glukhoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/kremona-1-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/darcy/kremona-1-osteklennoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/kremona-1-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/darcy/kremona-1-polotno-glukhoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/kremona-2-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/darcy/kremona-2-osteklennoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/kremona-2-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/darcy/kremona-2-polotno-glukhoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/platinum-1-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/platinym/platinum-1-osteklennoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/platinum-2-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/platinym/platinum-2-osteklennoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/platinum-3-1-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/platinym/platinum-3-1-osteklennoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/slayd-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/slide/slayd-osteklennoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/slayd-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/slide/slayd-polotno-glukhoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/alta-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/narvika/alta-osteklennoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/ivent-1-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/ivent/ivent-1-polotno-glukhoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/ivent-2-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/ivent/ivent-2-polotno-glukhoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/lamira-1-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/lamira/lamira-1-polotno-glukhoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/palatstso-3-1-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/palazzo/palatstso-3-1-polotno-glukhoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/alta-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/narvika/alta-polotno-glukhoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/palatstso-1-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/palazzo/palatstso-1-polotno-glukhoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/lamira-1-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/lamira/lamira-1-osteklennoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/arvika-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/narvika/arvika-polotno-glukhoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/granna-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/narvika/granna-polotno-glukhoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/royalti-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/darcy/royalti-polotno-glukhoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/aurum-3-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/aurum/aurum-3-osteklennoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/tvinvud-2-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/twinwood/tvinvud-2-polotno-glukhoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/arvika-202-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/narvika/arvika-202-osteklennoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/avesta-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/narvika/avesta-polotno-glukhoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/svea-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/narvika/svea-polotno-glukhoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/palatstso-3-1-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/palazzo/palatstso-3-1-osteklennoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/inari-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/darcy/inari-osteklennoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/aurum-2-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/aurum/aurum-2-osteklennoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/inari-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/darcy/inari-polotno-glukhoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/lamira-2-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/lamira/lamira-2-polotno-glukhoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/royalti-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/darcy/royalti-osteklennoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/lamira-3-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/lamira/lamira-3-polotno-glukhoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/tvinvud-1-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/twinwood/tvinvud-1-polotno-glukhoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/palatstso-2-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/palazzo/palatstso-2-polotno-glukhoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/lamira-5-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/lamira/lamira-5-osteklennoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/aurum-1-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/aurum/aurum-1-osteklennoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/arvika-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/narvika/arvika-osteklennoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/palatstso-1-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/palazzo/palatstso-1-osteklennoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/palatstso-2-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/palazzo/palatstso-2-osteklennoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/elina-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/darcy/elina-osteklennoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/elina-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/darcy/elina-polotno-glukhoe/
+
+Redirect 301 /catalog/mezhkomnatnye_dveri/smart-invisible-pro-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/derevyannye/nevidimki/smart-invisible-pro-polotno-glukhoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/smart-invisible-reverse-pro-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/derevyannye/nevidimki/smart-invisible-reverse-pro-polotno-glukhoe/
+Redirect 301 /catalog/mezhkomnatnye_dveri/lester-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/polipropilen/darcy/lester-polotno-glukhoe/
+
+Redirect 301 /catalog/mezhkomnatnye_dveri/split/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/narvika/
+
+# новые редиректы 13.04.22
+Redirect 301 /catalog/mezhkomnatnye_dveri/derevyannye/nevidimki/smart-invisible-pro-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/derevyannye/nevidimki/smart-invisible-pro-polotno-glukhoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/derevyannye/nevidimki/smart-invisible-reverse-pro-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/derevyannye/nevidimki/smart-invisible-reverse-pro-polotno-glukhoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/ekoshpon/maximum/chelsi-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/ekoshpon/maximum/chelsi-osteklennoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/ekoshpon/maximum/chelsi-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/ekoshpon/maximum/chelsi-polotno-glukhoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/ekoshpon/maximum/madrid-04-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/ekoshpon/maximum/madrid-04-osteklennoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/ekoshpon/maximum/mirella-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/ekoshpon/maximum/mirella-osteklennoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/ekoshpon/maximum/mirella-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/ekoshpon/maximum/mirella-polotno-glukhoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/ekoshpon/maximum/modena-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/ekoshpon/maximum/modena-osteklennoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/ekoshpon/optima/kapricheza-l-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/ekoshpon/optima/kapricheza-l-osteklennoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/ekoshpon/optima/kapricheza-l-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/ekoshpon/optima/kapricheza-l-polotno-glukhoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/ekoshpon/optima/perfekta-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/ekoshpon/optima/perfekta-osteklennoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/ekoshpon/optima/perfekta-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/ekoshpon/optima/perfekta-polotno-glukhoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/emal/aurum/aurum-1-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/aurum/aurum-1-osteklennoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/emal/aurum/aurum-2-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/aurum/aurum-2-osteklennoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/emal/aurum/aurum-3-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/aurum/aurum-3-osteklennoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/emal/darcy/elina-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/darcy/jelina-osteklennoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/emal/darcy/elina-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/darcy/jelina-polotno-glukhoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/emal/darcy/inari-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/darcy/inari-osteklennoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/emal/darcy/inari-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/darcy/inari-polotno-glukhoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/emal/darcy/kremona-1-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/darcy/kremona-1-osteklennoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/emal/darcy/kremona-1-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/darcy/kremona-1-polotno-glukhoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/emal/darcy/kremona-2-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/darcy/kremona-2-osteklennoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/emal/darcy/kremona-2-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/darcy/kremona-2-polotno-glukhoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/emal/darcy/royalti-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/darcy/rojalti-osteklennoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/emal/darcy/royalti-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/darcy/rojalti-polotno-glukhoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/emal/fleks/fleks-1-molding-khrom-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/fleks/fleks-1-molding-zoloto-polotno-glukhoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/emal/fleks/fleks-1-molding-zoloto-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/fleks/fleks-1-molding-hrom-polotno-glukhoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/emal/french/french-8-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/french/french-8-osteklennoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/emal/ivent/ivent-1-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/ivent/ivent-1-polotno-glukhoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/emal/ivent/ivent-2-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/ivent/ivent-2-polotno-glukhoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/emal/lamira/lamira-1-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/lamira/lamira-1-osteklennoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/emal/lamira/lamira-1-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/lamira/lamira-1-polotno-glukhoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/emal/lamira/lamira-2-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/lamira/lamira-2-polotno-glukhoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/emal/lamira/lamira-3-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/lamira/lamira-3-polotno-glukhoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/emal/lamira/lamira-5-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/lamira/lamira-5-osteklennoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/emal/libra/libra-1-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/libra/libra-1-polotno-glukhoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/emal/narvika/alta-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/narvika/alta-osteklennoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/emal/narvika/alta-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/narvika/alta-polotno-glukhoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/emal/narvika/arvika-202-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/narvika/arvika-202-osteklennoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/emal/narvika/arvika-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/narvika/arvika-osteklennoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/emal/narvika/arvika-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/narvika/arvika-polotno-glukhoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/emal/narvika/avesta-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/narvika/avesta-polotno-glukhoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/emal/narvika/granna-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/narvika/granna-polotno-glukhoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/emal/narvika/split-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/narvika/split-polotno-glukhoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/emal/narvika/svea-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/narvika/svea-polotno-glukhoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/emal/palazzo/palatstso-1-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/palazzo/palacco-1-osteklennoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/emal/palazzo/palatstso-1-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/palazzo/palacco-1-polotno-glukhoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/emal/palazzo/palatstso-2-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/palazzo/palacco-2-osteklennoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/emal/palazzo/palatstso-2-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/palazzo/palacco-2-polotno-glukhoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/emal/palazzo/palatstso-3-1-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/palazzo/palacco-3-1-osteklennoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/emal/palazzo/palatstso-3-1-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/palazzo/palacco-3-1-polotno-glukhoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/emal/platinym/platinum-1-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/platinym/platinum-1-osteklennoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/emal/platinym/platinum-2-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/platinym/platinum-2-osteklennoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/emal/platinym/platinum-3-1-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/platinym/platinum-3-1-osteklennoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/emal/slide/slayd-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/slide/slajd-osteklennoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/emal/slide/slayd-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/slide/slajd-polotno-glukhoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/emal/twinwood/tvinvud-1-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/twinwood/tvinvud-1-polotno-glukhoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/emal/twinwood/tvinvud-2-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/emal/twinwood/tvinvud-2-polotno-glukhoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/polipropilen/darcy/lester-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/polipropilen/darcy/lester-polotno-glukhoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/polipropilen/maximum/ameli-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/polipropilen/maximum/ameli-osteklennoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/polipropilen/maximum/ansi-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/polipropilen/maximum/ansi-osteklennoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/polipropilen/maximum/madrid-05-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/polipropilen/maximum/madrid-05-osteklennoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/polipropilen/maximum/shabli-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/polipropilen/maximum/shabli-polotno-glukhoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/shpon/linewood/laynvud-1-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/shpon/linewood/lajnvud-1-polotno-glukhoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/shpon/linewood/laynvud-2-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/shpon/linewood/lajnvud-2-polotno-glukhoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/shpon/optima/kapricheza-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/shpon/optima/kapricheza-osteklennoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/shpon/optima/kapricheza-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/shpon/optima/kapricheza-polotno-glukhoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/shpon/optima/karolina-l-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/shpon/optima/karolina-l-osteklennoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/shpon/optima/karolina-l-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/shpon/optima/karolina-l-polotno-glukhoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/shpon/optima/klassika-lyuks-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/shpon/optima/klassika-ljuks-osteklennoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/shpon/optima/klassika-lyuks-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/shpon/optima/klassika-ljuks-polotno-glukhoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/shpon/optima/malta-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/shpon/optima/mal-ta-osteklennoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/shpon/optima/malta-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/shpon/optima/mal-ta-polotno-glukhoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/shpon/optima/napoleon-osteklennoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/shpon/optima/napoleon-osteklennoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/shpon/optima/napoleon-polotno-glukhoe/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/shpon/optima/napoleon-polotno-glukhoe-raspashnaya/
+
+Redirect 301 /catalog/mezhkomnatnye_dveri/shpon/optima/mal-ta-osteklennoe-raspashnaya/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/shpon/optima/malta-osteklennoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/shpon/optima/mal-ta-polotno-glukhoe-raspashnaya/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/shpon/optima/malta-polotno-glukhoe-raspashnaya/
+
+Redirect 301 /about/news/26527/ https://belwooddoors.ru/
+
+# редиректы товаров с неправильных разделов 16.11.22
+Redirect 301 /catalog/mezhkomnatnye_dveri/ot-7000-do-10000/klassika-ljuks-polotno-glukhoe-raspashnaya/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/shpon/optima/klassika-ljuks-polotno-glukhoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/ot-7000-do-10000/chelsi-osteklennoe-raspashnaya/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/ekoshpon/maximum/chelsi-osteklennoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/ot-7000-do-10000/modena-osteklennoe-raspashnaya/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/ekoshpon/maximum/modena-osteklennoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/ot-7000-do-10000/madrid-05-osteklennoe-raspashnaya/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/polipropilen/maximum/madrid-05-osteklennoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/ot-7000-do-10000/madrid-04-osteklennoe-raspashnaya/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/ekoshpon/maximum/madrid-04-osteklennoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/ot-7000-do-10000/lester-polotno-glukhoe-raspashnaya/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/polipropilen/darcy/lester-polotno-glukhoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/ot-7000-do-10000/perfekta-osteklennoe-raspashnaya/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/ekoshpon/optima/perfekta-osteklennoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/ot-7000-do-10000/mirella-osteklennoe-raspashnaya/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/ekoshpon/maximum/mirella-osteklennoe-raspashnaya/
+
+# редиректы 24.01.23
+Redirect 301 /catalog/mezhkomnatnye_dveri/emal/darcy/stella-2-polotno-glukhoe-raspashnaya/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/shpon/darsi/stella-2-polotno-glukhoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/emal/darcy/stella-2-osteklennoe-raspashnaya/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/shpon/darsi/stella-2-osteklennoe-raspashnaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/emal/darcy/stella-2-polotno-glukhoe-raspashnaya-dvoynaya/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/shpon/darsi/stella-2-polotno-glukhoe-raspashnaya-dvoynaya/
+Redirect 301 /catalog/mezhkomnatnye_dveri/emal/darcy/stella-2-osteklennoe-raspashnaya-dvoynaya/ https://belwooddoors.ru/catalog/mezhkomnatnye_dveri/shpon/darsi/stella-2-osteklennoe-raspashnaya-dvoynaya/
+
+Redirect 301 /about/news/14849/ https://belwooddoors.ru/about/news/
+
+Redirect 301 /catalog/vkhodnye_dveri/argos-77-polotno-glukhoe/ https://belwooddoors.ru/catalog/vkhodnye_dveri/v-dom/argos-77-polotno-glukhoe/
+Redirect 301 /catalog/vkhodnye_dveri/argos-grand-77-polotno-glukhoe/ https://belwooddoors.ru/catalog/vkhodnye_dveri/v-dom/argos-grand-77-polotno-glukhoe/
+Redirect 301 /catalog/vkhodnye_dveri/duo-polotno-glukhoe/ https://belwooddoors.ru/catalog/vkhodnye_dveri/v-dom/duo-polotno-glukhoe/
+Redirect 301 /catalog/vkhodnye_dveri/round-polotno-glukhoe/ https://belwooddoors.ru/catalog/vkhodnye_dveri/v-dom/round-polotno-glukhoe/
+Redirect 301 /catalog/vkhodnye_dveri/trio-polotno-glukhoe/ https://belwooddoors.ru/catalog/vkhodnye_dveri/v-dom/trio-polotno-glukhoe/
+Redirect 301 /catalog/vkhodnye_dveri/start-polotno-glukhoe/ https://belwooddoors.ru/catalog/vkhodnye_dveri/v-kvartiry/start-polotno-glukhoe/
+Redirect 301 /catalog/vkhodnye_dveri/model-1-polotno-glukhoe/ https://belwooddoors.ru/catalog/vkhodnye_dveri/v-kvartiry/model-1-polotno-glukhoe/
+Redirect 301 /catalog/vkhodnye_dveri/model-2-polotno-glukhoe/ https://belwooddoors.ru/catalog/vkhodnye_dveri/v-kvartiry/model-2-polotno-glukhoe/
+Redirect 301 /catalog/vkhodnye_dveri/model-3-polotno-glukhoe/ https://belwooddoors.ru/catalog/vkhodnye_dveri/v-kvartiry/model-3-polotno-glukhoe/
+Redirect 301 /catalog/vkhodnye_dveri/model-5-polotno-glukhoe/ https://belwooddoors.ru/catalog/vkhodnye_dveri/v-kvartiry/model-5-polotno-glukhoe/
+Redirect 301 /catalog/vkhodnye_dveri/model-6-polotno-glukhoe/ https://belwooddoors.ru/catalog/vkhodnye_dveri/v-kvartiry/model-6-polotno-glukhoe/
+
+<IfModule mod_php7.c>
+
+
+	php_flag allow_call_time_pass_reference 1
+	php_flag session.use_trans_sid off
+	#php_value display_errors 1
+	#php_value mbstring.internal_encoding UTF-8
+</IfModule>
+
+<IfModule mod_rewrite.c>
+	Options +FollowSymLinks
+	RewriteEngine On
+
+	RewriteCond %{REQUEST_URI} //+
+        RewriteRule ^(.*) $1 [R=301,L]
+
+#    RewriteCond %{REQUEST_URI} ^(.*)/$
+#	RewriteRule .* - [L]
+#
+#	RewriteCond %{ENV:REDIRECT_STATUS} 200
+#	RewriteRule .* - [L]
+#
+#	RewriteCond %{REQUEST_METHOD} =GET
+#	RewriteCond %{REQUEST_URI} ^(.*)/index.php$
+#	RewriteRule ^(.*)$ %1/ [R=301,L]
+
+	#редирект на https start
+	RewriteCond %{SERVER_PORT} !^443$
+	RewriteRule .* https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L]
+	#редирект на https end
+
+	RewriteBase /
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_URI} !(.*)/$
+	RewriteRule ^(.*[^/])$ $1/ [L,R=301]
+
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-l
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_FILENAME} !/bitrix/urlrewrite.php$
+	RewriteRule ^(.*)$ /bitrix/urlrewrite.php [L]
+	RewriteRule .* - [E=REMOTE_USER:%{HTTP:Authorization}]
+
+
+    RewriteCond %{HTTP_HOST} ^www.belwooddoors.ru$ [NC]
+    RewriteRule ^(.*)$ https://belwooddoors.ru/$1 [R=301,L]
+
+    #Перенаправлять с адреса без слеша на адрес со слешем (который в конце)
+    RewriteCond %{REQUEST_URI} ^(.*/[^/\.]+)$
+#    RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1/ [R=301,L]
+    RewriteRule ^(.*)$ /$1/ [R=301,L]
+
+    #Правило обрабатывает внутренние страницы
+    # http://site.ru/catalog////item///
+    RewriteCond %{REQUEST_URI} ^(.*)/{2,}(.*)$
+    #Проверяем, повторяется ли слеш (//) более двух раз.
+    RewriteRule . %1/%2 [R=301,L]
+    #Исключаем все лишние слеши.
+
+#    Ломает интеграцию с Битрикс24 - Заказы
+#    #удаляем слеши для главной http://site.ru/////
+#    RewriteCond %{THE_REQUEST} ([^\s]*)\/{2,}(\?[^\s]*)?
+#    RewriteRule (.*) / [R=301,L]
+
+
+
+
+</IfModule>
+
+<IfModule mod_dir.c>
+	DirectoryIndex index.php index.html
+</IfModule>
+
+<IfModule mod_expires.c>
+	ExpiresActive on
+	ExpiresByType image/jpeg "access plus 3 day"
+	ExpiresByType image/gif "access plus 3 day"
+</IfModule>

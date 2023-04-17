@@ -1,0 +1,6 @@
+<?
+$sSectionName = "Баффле";
+$arDirProperties = array(
+
+);
+?>

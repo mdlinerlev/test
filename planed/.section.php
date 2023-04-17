@@ -1,0 +1,6 @@
+<?
+$sSectionName = "Погонаж";
+$arDirProperties = Array(
+
+);
+?>

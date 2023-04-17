@@ -1,0 +1,6 @@
+{
+    "require": {
+        "imagine/imagine": "0.6.*",
+        "econea/nusoap": "^0.9.11"
+    }
+}
