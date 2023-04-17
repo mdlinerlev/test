@@ -1,7 +1,8 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("test");
-?><style>
+?>
+<style>
  @media (max-width: 630px) {
 	.block_white_bg {
 	  width: 95% !important;
