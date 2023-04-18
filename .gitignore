@@ -4,6 +4,8 @@
 vendor
 /mp3
 
+/local/.settings.php
+/local/dbconn.php
 
 /import
 
